@@ -21,7 +21,7 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.subtract(-5, -5), 0)
         self.assertEqual(self.calc.subtract(-3, 5), -8)
 
-    def test_multiply(self):
+    def test_multiplication(self):
         """Test the multiply method."""
         self.assertEqual(self.calc.multiply(4, 5), 20)
         self.assertEqual(self.calc.multiply(0, 10), 0)
@@ -36,3 +36,8 @@ class TestSimpleCalculator(unittest.TestCase):
 
         # Division by zero should return None
         self.assertIsNone(self.calc.divide(5, 0))
+        self.assertIsNone(self.calc.divide(0, 0))
+
+
+if __name__ == "__main__":
+    unittest.main()
